@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 100%;
+}
+
+div.mainContent {
+	margin: 0px 15px;
+}
+a.navbar-brand, a.navbar-brand:hover{
+	color: #fff;
+}
+th.sort {
+	cursor: pointer;
+}
+th#movie-title {
+	width: 15rem;
+}
+th#content-rating {
+	width: 12rem
+}
+th#genres {
+	width: 12rem;
+}
+th#title-year {
+	width: 7rem;
+}
+th#language {
+	width: 9rem;
+}
+th#country {
+	width: 8rem;
+}
+th#budget {
+	width: 8rem;
+}
+th#directors {
+    width: 10rem;
+}
+th#actors {
+    width: 10rem;
+}
+i.fa-filter{
+	display: none;
+}
+/*th#movie-title:hover i.fa-filter{
+	display: -webkit-inline-flex;
+}
+th#genres:hover i.fa-filter{
+	display: -webkit-inline-flex;
+}
+th#language:hover i.fa-filter{
+	display: -webkit-inline-flex;
+}
+th#title-year:hover i.fa-filter {
+	display: -webkit-inline-flex;
+}
+th#country:hover i.fa-filter {
+	display: -webkit-inline-flex;
+}
+th#budget:hover i.fa-filter {
+	display: -webkit-inline-flex;
+}*/
+
+ul.pagination {
+    position:fixed;
+    width:100%; 
+    bottom: 10px;
+}
+
+ul.pagination li.page-item {
+	box-shadow: -2px 0px 30px 2px rgba(0,0,0,0.2);
+}
+.page-item:first-child .page-link {
+    border-top-left-radius: 0rem !important;
+    border-bottom-left-radius: 0rem !important;
+}
+.page-item:last-child .page-link {
+    border-top-right-radius: 0rem !important;
+    border-bottom-right-radius: 0rem !important;
+}
+a:focus {
+	box-shadow: none !important;
+}

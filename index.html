@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="ISO-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Movies</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
+	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link id="pageStyle" rel="stylesheet" type="text/css" href="/css/light.css" />
+    <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-primary sticky-top">
+		<a class="navbar-brand" href="#">Movies</a>
+		<!-- Links -->
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<span style="color: #fff">Switch to:</span> <button id="switchTheme" class="btn btn-outline-default btn-sm" type="button" onclick="switchTheme('dark.css')">Dark Mode</button>
+			</li>
+		</ul>
+		
+	</nav><br/>
+	<div class="container-fluid">
+        <div id="loader" class="text-center"><i class="fas fa-3x fa-cog fa-spin"></i></div>
+		<div id="movielist-table" >
+			<table id="movieTable" class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th class="sort" id="movie-title" onclick="sort(this, 'movie_title')">
+							Name <i class="fas fa-sort-down" style="display: none"></i><i class="fas fa-sort-up"></i>
+							<i class="fas fa-filter"></i>
+						</th>
+						<th class="sort" id="genres" onclick="sort(this, 'genres')">
+							Genres <i class="fas fa-sort-down" style="display: none"></i><i class="fas fa-sort-up" style="display: none"></i>
+							<i class="fas fa-filter"></i>
+						</th>
+						<th class="sort" id="content-rating" onclick="sort(this, 'content_rating')">
+                            Content Rating <i class="fas fa-sort-down" style="display: none"></i><i class="fas fa-sort-up" style="display: none"></i>
+                        </th>
+						<th class="sort" id="title-year" onclick="sort(this, 'title_year')">
+							Year <i class="fas fa-sort-down" style="display: none"></i><i class="fas fa-sort-up" style="display: none"></i>
+							<i class="fas fa-filter"></i>
+						</th>
+						<th class="sort" id="language" onclick="sort(this, 'language')">
+							Language <i class="fas fa-sort-down" style="display: none"></i><i class="fas fa-sort-up" style="display: none"></i>
+							<i class="fas fa-filter"></i>
+						</th>
+						<th class="sort" id="country" onclick="sort(this, 'country')">
+							Country <i class="fas fa-sort-down" style="display: none"></i><i class="fas fa-sort-up" style="display: none"></i>
+							<i class="fas fa-filter"></i>
+						</th>
+						<th class="sort" id="directors" onclick="sort(this, 'director_name')">
+                            Directors <i class="fas fa-sort-down" style="display: none"></i><i class="fas fa-sort-up" style="display: none"></i>
+                        </th>
+						<th id="actors">Actors</th>
+						<th class="sort" id="budget" onclick="sort(this, 'budget')">
+							Budget <i class="fas fa-sort-down" style="display: none"></i><i class="fas fa-sort-up" style="display: none"></i>
+							<i class="fas fa-filter"></i>
+						</th>
+					</tr>
+				</thead>
+				<tbody id="moviesTable">
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<ul id="pagination" class="pagination pagination-sm justify-content-center">
+		<li class="page-item"><a class="page-link" href="#" onclick="first()">First</a></li>
+		<li class="page-item"><a class="page-link" href="#" onclick="prev()">Prev</a></li>
+		<li class="page-item"><a class="page-link" >0/0</a></li>
+		<li class="page-item"><a class="page-link" href="#" onclick="next()">Next</a></li>
+		<li class="page-item"><a class="page-link" href="#" onclick="last()">Last</a></li>
+	</ul>	
+</body>
+</html>
