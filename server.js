@@ -5,6 +5,5 @@ app.get("/", function (req, res,next) {
     console.log(__dirname + "/index.html");
     res.sendFile( __dirname + "/index.html");
 });
-//app.listen(process.env.PORT || 8080);
-app.listen(8080, "localhost");
+app.listen(process.env.PORT || 8080);
 console.log("My app server is listening on port 8080");
