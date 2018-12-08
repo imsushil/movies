@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             sort(movie_tag, 'movie_title');
         }
     };
-    xhttp.open("GET", "/resources/movieslisting.json", true);
+    xhttp.open("GET", "/movieslisting.json", true);
     xhttp.send();
 
     var showResult = function() {
